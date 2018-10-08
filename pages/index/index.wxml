@@ -1,0 +1,38 @@
+<!--index.wxml-->
+<view class="home">
+  <scroll-view class="menu" scroll-y scroll-with-animation>
+    <view class="scroll-view-item">
+      <view wx:for="{{menuList}}" wx:key="index" class="{{menuIndex == index ? 'menuItem actived':'menuItem'}}" data-index="{{index}}" data-id="{{item.id}}" bindtap="changeIndex">
+        {{item.value}}
+      </view>
+    </view>
+  </scroll-view>
+  <scroll-view class="cookList" scroll-y bindscroll="scrollCook" scroll-into-view="{{orientate}}" scroll-with-animation>
+    <view class="cookWrap" wx:for="{{cookList}}" wx:key="index" wx:for-index="index" wx:for-item="item" id="{{item.id}}">
+      <view class="cookHd">
+        {{item.cookHd}}
+      </view>
+      <view class="cookBd">
+        <cookItem wx:for="{{item.cookBd}}" wx:key="idx" wx:for-index="idx" wx:for-item="child" item="{{child}}" data-index="{{index}}" data-idx="{{idx}}"  bind:changePrice="changePrice"></cookItem>
+      </view>
+    </view>
+  </scroll-view>
+  <view class="{{showList ? 'cartList showList' : 'cartList'}}">
+    <view wx:for="{{cartList}}" wx:key="{{index}}" class="cartItem">
+      <view class="describe">
+        <text class="goodsName">{{item.cookName}}</text>
+        <text class="goodsPrice">¥{{item.price}}</text>
+      </view>
+      <view class="changeNum">
+        <image class="cookIcon minus" data-item="{{item}}" bindtap="handleMinus" src="../../assets/minus.svg"></image>
+        <view class="num">{{item.num}}</view>
+        <image class="cookIcon plus" data-item="{{item}}" bindtap="handlePlus" src="../../assets/plus.svg"></image>
+      </view>
+    </view>
+  </view>
+  <view class="cart" bindtap="handleCart">
+    <image src="../../assets/cart.svg"></image>
+    <text>¥{{price}}</text>
+    <button capture-catch:tap="goPay">提交</button>
+  </view>
+</view>

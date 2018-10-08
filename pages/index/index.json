@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "cookItem": "/components/cookItem/index"
+  },
+  "navigationBarTitleText": "首页"
+}

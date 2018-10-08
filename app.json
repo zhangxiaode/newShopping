@@ -1,0 +1,34 @@
+{
+  "pages": [
+    "pages/home/index",
+    "pages/index/index",
+    "pages/userCenter/index",
+    "pages/order/index",
+    "pages/about/index"
+  ],
+  "tabBar": {
+    "color": "#666",
+    "selectedColor": "#0152f6",
+    "position": "bottom",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "assets/home.png",
+        "selectedIconPath": "assets/homeHover.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/userCenter/index",
+        "iconPath": "assets/user.png",
+        "selectedIconPath": "assets/userHover.png",
+        "text": "个人中心"
+      }
+    ]
+  },
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#1890ff",
+    "navigationBarTitleText": "shopping",
+    "navigationBarTextStyle": "white"
+  }
+}

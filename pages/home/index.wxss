@@ -1,0 +1,10 @@
+/**index.wxss**/
+page{
+  height:100%;
+}
+.homePage{
+  height:100%;overflow:hidden;text-align:center;
+}
+.homePage image{
+  min-width:100%;min-height:100%;
+}

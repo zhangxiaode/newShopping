@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "arrowBtn": "/components/arrowBtn/index"
+  },
+  "navigationBarTitleText": "个人中心"
+}
