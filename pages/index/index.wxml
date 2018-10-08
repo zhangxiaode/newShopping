@@ -1,38 +1,85 @@
 <!--index.wxml-->
-<view class="home">
-  <scroll-view class="menu" scroll-y scroll-with-animation>
-    <view class="scroll-view-item">
-      <view wx:for="{{menuList}}" wx:key="index" class="{{menuIndex == index ? 'menuItem actived':'menuItem'}}" data-index="{{index}}" data-id="{{item.id}}" bindtap="changeIndex">
-        {{item.value}}
+<view class="order">
+  <scroll-view scroll-y scroll-with-animation>
+    <view class="section orderTop">
+      <view class="welcome">
+        <text>欢迎光临</text>
+        <view class="share">
+          <image src="../../assets/share.svg"></image>
+        </view>
       </view>
+      <view class="shopSynopsis">
+        <view class="shopInfo">
+          <image src="../../assets/logo.png"></image>
+          <view class="shopPro">
+            <view class="shopName">春暖花开</view>
+            <view class="shopDes">51~100元 杭帮菜，粤菜</view>
+          </view>
+        </view>
+        <view class="attention">
+          <image src="../../assets/hotHeart.svg"></image>
+        </view>
+      </view>
+      <view class="shopPlace">
+        <image class="place" src="../../assets/place.svg"></image>
+        <text>浙江省杭州市西湖区西溪湿地公园慢生活街区</text>
+        <image class="tel" src="../../assets/tel.svg"></image>
+      </view>
+    </view>
+    <view class="section goodsList">
+      <view class="sectionHd">本店美食</view>
+      <view class="goodsBody">
+        <view class="goodsItem">
+          <image src="http://www.zhangxiaode.com/wxImgs/乌梅.jpg"></image>
+          <view class="goodsName">椒麻鸡</view>
+          <view class="goodsPrice">¥98.00</view>
+        </view>
+        <view class="goodsItem">
+          <image src="http://www.zhangxiaode.com/wxImgs/乌梅.jpg"></image>
+          <view class="goodsName">椒麻鸡</view>
+          <view class="goodsPrice">¥98.00</view>
+        </view>
+        <view class="goodsItem">
+          <image src="http://www.zhangxiaode.com/wxImgs/乌梅.jpg"></image>
+          <view class="goodsName">椒麻鸡</view>
+          <view class="goodsPrice">¥98.00</view>
+        </view>
+        <view class="goodsItem">
+          <image src="http://www.zhangxiaode.com/wxImgs/乌梅.jpg"></image>
+          <view class="goodsName">椒麻鸡</view>
+          <view class="goodsPrice">¥98.00</view>
+        </view>
+      </view>
+      <view class="goCarte">进入菜单</view>
+    </view>
+    <view class="section personal">
+      <view class="sectionHd">会员详情</view>
+      <view class="weLevel">
+        <view class="wel">欢迎回来，金风凝香</view>
+        <view class="level">
+          <view class="levelIcon">
+            <image src="../../assets/levelIcon.svg"></image>
+          </view>
+          <text>平民</text>
+        </view>
+      </view>
+      <view class="score">我在本店成长值267分，升级还需1193分</view>
+    </view>
+    <view class="section shopDetail">
+      <view class="sectionHd">会员详情</view>
+      <view class="banner">
+        <image src="http://www.zhangxiaode.com/wxImgs/乌梅.jpg"></image>
+      </view>
+      <view class="shopIntro">餐厅坐落在仙境般的西溪湿地s生态公园,让顾客在品尝美味同时也可以欣赏西溪湿地的美丽景色</view>
+      <view class="shopWrap">
+        <arrowBtn wx:for="{{shopInfo}}" wx:key="index" arrowData="{{item}}" bindtap="goAbout"></arrowBtn>
+      </view>
+    </view>
+    <view class="evaluate">
+    </view>
+    <view class="copyRight">
+    </view>
+    <view class="goPay">
     </view>
   </scroll-view>
-  <scroll-view class="cookList" scroll-y bindscroll="scrollCook" scroll-into-view="{{orientate}}" scroll-with-animation>
-    <view class="cookWrap" wx:for="{{cookList}}" wx:key="index" wx:for-index="index" wx:for-item="item" id="{{item.id}}">
-      <view class="cookHd">
-        {{item.cookHd}}
-      </view>
-      <view class="cookBd">
-        <cookItem wx:for="{{item.cookBd}}" wx:key="idx" wx:for-index="idx" wx:for-item="child" item="{{child}}" data-index="{{index}}" data-idx="{{idx}}"  bind:changePrice="changePrice"></cookItem>
-      </view>
-    </view>
-  </scroll-view>
-  <view class="{{showList ? 'cartList showList' : 'cartList'}}">
-    <view wx:for="{{cartList}}" wx:key="{{index}}" class="cartItem">
-      <view class="describe">
-        <text class="goodsName">{{item.cookName}}</text>
-        <text class="goodsPrice">¥{{item.price}}</text>
-      </view>
-      <view class="changeNum">
-        <image class="cookIcon minus" data-item="{{item}}" bindtap="handleMinus" src="../../assets/minus.svg"></image>
-        <view class="num">{{item.num}}</view>
-        <image class="cookIcon plus" data-item="{{item}}" bindtap="handlePlus" src="../../assets/plus.svg"></image>
-      </view>
-    </view>
-  </view>
-  <view class="cart" bindtap="handleCart">
-    <image src="../../assets/cart.svg"></image>
-    <text>¥{{price}}</text>
-    <button capture-catch:tap="goPay">提交</button>
-  </view>
 </view>

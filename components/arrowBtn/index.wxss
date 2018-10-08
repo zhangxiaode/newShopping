@@ -1,7 +1,7 @@
 /**index.wxss**/
 .arrowBtn{
   display:flex;justify-content: space-between;align-items: center;
-  padding:0 30rpx;background:#fff;
+  border-top:solid 2rpx #d2d4dd;
   height:100rpx;
 }
 .arrowBtn .arrowL{

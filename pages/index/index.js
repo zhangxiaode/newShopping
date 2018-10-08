@@ -3,6 +3,32 @@ const app = getApp()
 // import ajax from "../../utils/ajax"
 Page({
   data: {
+    shopInfo: [
+      {
+        showArrow: false,
+        arrowL: '营业时间',
+        arrowR: '11:30~13:30 & 17:45~21:00',
+        icon: '../../assets/info.svg'
+      },
+      {
+        showArrow: true,
+        arrowL: '店铺地址',
+        arrowR: '浙江省杭州市西湖区西溪湿地公园',
+        icon: '../../assets/info.svg'
+      },
+      {
+        showArrow: false,
+        arrowL: '联系电话',
+        arrowR: '13111111111',
+        icon: '../../assets/info.svg'
+      },
+      {
+        showArrow: false,
+        arrowL: '特色标签',
+        arrowR: '123',
+        icon: '../../assets/info.svg'
+      }
+    ],
     menuIndex: 0,
     menuList:[
       {
@@ -36,6 +62,11 @@ Page({
     cartList: app.globalData.cartList,
     showList:false,
     scrollData: []
+  },
+  goAbout() {
+    wx.navigateTo({
+      url: '../about/index'
+    })
   },
   changePrice(event) {
     var total = 0

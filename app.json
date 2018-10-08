@@ -1,34 +1,35 @@
 {
   "pages": [
-    "pages/home/index",
     "pages/index/index",
+    "pages/home/index",
     "pages/userCenter/index",
     "pages/order/index",
     "pages/about/index"
   ],
   "tabBar": {
-    "color": "#666",
-    "selectedColor": "#0152f6",
+    "backgroundColor": "#35353E",
+    "color": "#86868C",
+    "selectedColor": "#fff",
     "position": "bottom",
     "list": [
       {
         "pagePath": "pages/index/index",
         "iconPath": "assets/home.png",
         "selectedIconPath": "assets/homeHover.png",
-        "text": "首页"
+        "text": "订单"
       },
       {
         "pagePath": "pages/userCenter/index",
         "iconPath": "assets/user.png",
         "selectedIconPath": "assets/userHover.png",
-        "text": "个人中心"
+        "text": "会员中心"
       }
     ]
   },
   "window": {
     "backgroundTextStyle": "dark",
-    "navigationBarBackgroundColor": "#1890ff",
-    "navigationBarTitleText": "shopping",
+    "navigationBarBackgroundColor": "#202020",
+    "navigationBarTitleText": "春暖花开",
     "navigationBarTextStyle": "white"
   }
 }

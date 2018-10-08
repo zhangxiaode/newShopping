@@ -1,83 +1,146 @@
 /**index.wxss**/
-.menu{
-  position:absolute;left:0;top:0;bottom:100rpx;
-  width:220rpx;
-  background:#f2f2f2;
-}
 ::-webkit-scrollbar {
   width: 0;
   height: 0;
   color: transparent;
 }
-.menu .menuItem{
-  height:90rpx;line-height:90rpx;
-  color: #656565;font-size:34rpx;font-family: "Microsoft Yahei";
-  padding-left:20rpx;
+.order{
+  background:#ccc;
 }
-.menu .menuItem.actived{
-  font-size:32rpx;color:#ffa131;
-  background:#fff;
+.section{
+  background:#f2f0f7;
 }
-.cookList{
-  position:absolute;left:220rpx;top:0;bottom:100rpx;right:0;
-  width:auto;
+.section .sectionHd{
+  font-weight:bold;font-size:40rpx;color:#212221;
+  padding:20rpx 30rpx 0 30rpx;line-height:140rpx;
 }
-.cookList .cookHd{
-  font-size:30rpx;color:#333;
+.orderTop{
+  box-sizing:border-box;width:100%;height:350rpx;padding:0 20rpx;
+  margin-bottom:20rpx;
+}
+.orderTop .welcome{
+  display:flex;justify-content: space-between;align-items: center;
+  height:104rpx;
+}
+.orderTop .welcome text{
+  flex:1;font-size:28rpx;color:#8d8c90;
+}
+.orderTop .welcome .share{
+  border-radius:33rpx;background:#aaa9ac;
+  width:66rpx;height:66rpx;
+}
+.orderTop .welcome .share image{
+  display:block;width:36rpx;height:36rpx;margin:15rpx 0 15rpx 18rpx;
+}
+.shopSynopsis{
+  display:flex;justify-content: space-between;align-items: center;
+  height:156rpx;border-bottom:solid 2rpx #dfdee4;
+}
+.shopSynopsis .shopInfo{
+  display:flex;justify-content: space-between;align-items: center;flex:1;
+  height:156rpx;border-right:solid 2rpx #dfdee4;
+}
+.shopSynopsis .shopInfo image{
+  width:112rpx;height:112rpx;border-radius:8rpx;
+  margin:22rpx;
+}
+.shopSynopsis .shopInfo .shopPro{
+  display:flex;flex-direction: column;justify-content: space-around;align-items: flex-start;flex:1;
+  height:96rpx;padding:20rpx 0;
+}
+.shopSynopsis .shopInfo .shopName{
+  display:block;font-weight:bold;font-size:36rpx;color:#191918;
+}
+.shopSynopsis .shopInfo .shopDes{
+  font-size:24rpx;color:#7f7f81;
+}
+.shopSynopsis .attention{
+  width:90rpx;text-align:center;
+}
+.shopSynopsis .attention image{
+  width:50rpx;height:50rpx;
+}
+.shopPlace{
+  height:88rpx;
+}
+.shopPlace .place{
+  float:left;width:40rpx;height:40rpx;padding:22rpx 22rpx 22rpx 0;
+}
+.shopPlace text{
+  float:left;height:88rpx;line-height: 88rpx;
+  color:#6d6c6e;font-size:24rpx;
+}
+.shopPlace .tel{
+  float:right;width:50rpx;height:50rpx;margin:19rpx;
+}
+.goodsList{
+  margin-bottom:20rpx;overflow: hidden;
+  background:#f2f0f7;
+}
+.goodsList .goodsBody{
+  overflow:hidden;padding:0 10rpx;
+}
+.goodsList .goodsBody .goodsItem{
+  float:left;width:50%;padding:10rpx;
+  box-sizing: border-box;
+}
+.goodsList .goodsBody .goodsItem image{
+  width:100%;height:258rpx;border-radius:12rpx;
+}
+.goodsList .goodsBody .goodsItem .goodsName{
+  margin:22rpx 0 12rpx 0;font-size:26rpx;color:#404040;
+}
+.goodsList .goodsBody .goodsItem .goodsPrice{
+  font-size:24rpx;color:#111210;font-weight:bold;
+  margin-bottom:40rpx;
+}
+.goodsList .goCarte{
+  text-align:center;font-size:28rpx;color:#fff;font-weight:bold;
+  margin:40rpx 20rpx;height:90rpx;line-height:90rpx;
+  background:#eb473d;border-radius:6rpx;
+}
+.personal{
+  font-size:40rpx;font-weight:bold;color:#2a2a2b;
+  margin-bottom:20rpx;background:#f2f0f7;
+  overflow: hidden;
+}
+.personal .weLevel{
+  display:flex;justify-content: flex-start;align-items: center;
+  height:76rpx;padding:0 30rpx;
+}
+.personal .weLevel .wel{
+  font-size:28rpx;color:#1a1a19;
+}
+.personal .weLevel .level{
+  background:#c9c8c7;border-radius:25rpx;
+  width:128rpx;height:50rpx;
+  overflow: hidden;margin-left:20rpx;
+}
+.personal .weLevel .level .levelIcon{
+  float:left;width:46rpx;height:46rpx;margin:4rpx;
+  border-radius:23rpx;background:#e6e6e8;
+}
+.personal .weLevel .level .levelIcon image{
+  width:26rpx;height:26rpx;margin:10rpx;
+}
+.personal .weLevel .level text{
+  float:left;line-height:50rpx;margin-left:6rpx;
+  color:#fff;font-size:26rpx;
+}
+.personal .score{
+  height:60rpx;margin-bottom:40rpx;padding:0 30rpx;
+  font-size:24rpx;color:#757577;
+}
+.shopDetail .banner{
+  text-align:center;
+}
+.shopDetail .banner image{
+  width:710rpx;
+}
+.shopDetail .shopIntro{
+  font-size:28rpx;color:#626163;line-height:40rpx;
   padding:20rpx;
 }
-.cookList .cookHd:before{
-  float:left;content:"";width:6rpx;height:100%;
-  background:#ffa131;
-  margin-right:10rpx;
-}
-.cart{
-  display:flex;justify-content: space-between;align-items: center;
-  position:fixed;bottom:0;left:0;width:100%;height:100rpx;
-  background:rgb(91, 196, 245);
-}
-.cart image{
-  width:80rpx;height:80rpx;color:#fff;
-  margin:10rpx;
-}
-.cart text{
-  flex:1;color:#fff;
-}
-.cart button{
-  color:#fff;font:normal 36rpx/100rpx "Microsoft Yahei";
-  border-radius:0;background:#1890ff;border:none;
-  width:200rpx;height:100rpx;
-}
-.cartList{
-  position:fixed;bottom:100rpx;left:0;z-index:9;width:100%;
-  background:#fff;transition: all 0.3s;
-  transform-origin: center bottom;
-  transform:scaleY(0);
-}
-.cartList.showList{
-  transform:scaleY(1);
-}
-.cartList .cartItem{
-  display:flex;justify-content: space-between;align-items: center;
-  border-bottom:solid 2rpx #eee;
-  height:140rpx;padding:0 20rpx;
-}
-.cartItem .describe{
-  flex:1;display:flex;flex-direction: column;justify-content: space-between;align-items: flex-start;
-}
-.cartItem .describe .goodsName{
-  font:normal 32rpx "Microsoft Yahei";
-}
-.cartItem .describe .goodsPrice{
-  color:#f00;font:bold 42rpx "Microsoft Yahei";
-}
-.cartItem .changeNum{
-  display:flex;justify-content:flex-end;align-items: center;
-}
-.cartItem .cookIcon{
-  width:48rpx;height:48rpx;border-radius:24rpx;
-}
-.cartItem .num{
-  margin:0 10rpx;color:#333;
-  flex:1;
+.shopDetail .shopWrap{
+  padding:0 20rpx;
 }
