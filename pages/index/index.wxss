@@ -131,6 +131,9 @@
   height:60rpx;margin-bottom:40rpx;padding:0 30rpx;
   font-size:24rpx;color:#757577;
 }
+.shopDetail{
+  margin-bottom:20rpx;
+}
 .shopDetail .banner{
   text-align:center;
 }
@@ -143,4 +146,32 @@
 }
 .shopDetail .shopWrap{
   padding:0 20rpx;
+}
+.shopDetail .tagItems{
+  padding:20rpx 10rpx;overflow:hidden;
+}
+.shopDetail .tagItem{
+  border:solid 2rpx #abaaae;border-radius:8rpx;
+  font-size:26rpx;color:#535253;
+  float:left;padding:16rpx 22rpx;margin:10rpx;
+}
+.stars{
+  display: flex;justify-content: space-between;align-items: center;
+  border-bottom:solid 2rpx #d7d5db;
+}
+.stars .starItem{
+  flex:1;text-align:center;
+  padding:42rpx 0;
+}
+.stars .starItem .starType{
+  color:#626264;font-size:24rpx;
+}
+.stars .starItem .star{
+  padding:12rpx 0;
+}
+.stars .starItem .star image{
+  width:26rpx;height:26rpx;margin:0 5rpx;
+}
+.stars .starItem .starLevel{
+  color:#0f0f0d;font-size:26rpx;
 }

@@ -73,9 +73,62 @@
       <view class="shopIntro">餐厅坐落在仙境般的西溪湿地s生态公园,让顾客在品尝美味同时也可以欣赏西溪湿地的美丽景色</view>
       <view class="shopWrap">
         <arrowBtn wx:for="{{shopInfo}}" wx:key="index" arrowData="{{item}}" bindtap="goAbout"></arrowBtn>
+        <view class="tagItems">
+          <text class="tagItem">老字号</text>
+          <text class="tagItem">有景观台</text>
+          <text class="tagItem">无线上网</text>
+          <text class="tagItem">可以刷卡</text>
+          <text class="tagItem">免费停车</text>
+          <text class="tagItem">微信支付</text>
+          <text class="tagItem">有露天位</text>
+          <text class="tagItem">支付宝支付</text>
+          <text class="tagItem">杭帮菜</text>
+          <text class="tagItem">粤菜</text>
+        </view>
       </view>
     </view>
-    <view class="evaluate">
+    <view class="section evaluate">
+      <view class="sectionHd">吃货评价</view>
+      <view class="stars">
+        <view class="starItem">
+          <view class="starType">菜肴口味</view>
+          <view class="star">
+            <image src="../../assets/star.svg"></image>
+            <image src="../../assets/star.svg"></image>
+            <image src="../../assets/star.svg"></image>
+            <image src="../../assets/star.svg"></image>
+            <image src="../../assets/star.svg"></image>
+          </view>
+          <view class="starLevel">4.9</view>
+        </view>
+        <view class="starItem">
+          <view class="starType">上菜速度</view>
+          <view class="star">
+            <image src="../../assets/star.svg"></image>
+            <image src="../../assets/star.svg"></image>
+            <image src="../../assets/star.svg"></image>
+            <image src="../../assets/star.svg"></image>
+            <image src="../../assets/star.svg"></image>
+          </view>
+          <view class="starLevel">4.9</view>
+        </view>
+        <view class="starItem">
+          <view class="starType">就餐环境</view>
+          <view class="star">
+            <image src="../../assets/star.svg"></image>
+            <image src="../../assets/star.svg"></image>
+            <image src="../../assets/star.svg"></image>
+            <image src="../../assets/star.svg"></image>
+            <image src="../../assets/star.svg"></image>
+          </view>
+          <view class="starLevel">5</view>
+        </view>
+      </view>
+      <view class="evals">
+        <view class="evalsItem">
+          
+        </view>
+      </view>
     </view>
     <view class="copyRight">
     </view>

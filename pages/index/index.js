@@ -8,29 +8,29 @@ Page({
         showArrow: false,
         arrowL: '营业时间',
         arrowR: '11:30~13:30 & 17:45~21:00',
-        icon: '../../assets/info.svg'
+        icon: '../../assets/timeIcon.svg'
       },
       {
         showArrow: true,
         arrowL: '店铺地址',
         arrowR: '浙江省杭州市西湖区西溪湿地公园',
-        icon: '../../assets/info.svg'
+        icon: '../../assets/place.svg'
       },
       {
         showArrow: false,
         arrowL: '联系电话',
         arrowR: '13111111111',
-        icon: '../../assets/info.svg'
+        icon: '../../assets/telIcon.svg'
       },
       {
         showArrow: false,
         arrowL: '特色标签',
-        arrowR: '123',
-        icon: '../../assets/info.svg'
+        arrowR: '',
+        icon: '../../assets/tagIcon.svg'
       }
     ],
     menuIndex: 0,
-    menuList:[
+    menuList: [
       {
         value:'浆果类',
         id: 'berry'
