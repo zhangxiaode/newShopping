@@ -1,10 +1,8 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/home/index",
-    "pages/userCenter/index",
-    "pages/order/index",
-    "pages/about/index"
+    "pages/welcome/index",
+    "pages/userCenter/index"
   ],
   "tabBar": {
     "backgroundColor": "#35353E",

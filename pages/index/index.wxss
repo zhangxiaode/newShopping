@@ -175,3 +175,52 @@
 .stars .starItem .starLevel{
   color:#0f0f0d;font-size:26rpx;
 }
+.evals .evalItem{
+  border-bottom:solid 2rpx #d3d5e1;
+  margin:0 20rpx;padding-bottom:25rpx;
+}
+.evals .evalItem .evalUser{
+  display:flex;justify-content: space-between;align-items: center;
+  padding:30rpx 0 25rpx;height:100rpx;
+}
+.evals .evalItem .evalPhoto{
+  width:100rpx;height:100rpx;border-radius:50rpx;overflow:hidden;
+}
+.evals .evalItem .evalInfo{
+  flex:1;padding-left:20rpx;
+}
+.evals .evalItem .evalName{
+  color:#282827;font-size:28rpx;font-weight:bold;
+}
+.evals .evalItem .evalDate{
+  font-size:22rpx;color:#7b796f;
+}
+.evals .evalItem .assess{
+  font-size:22rpx;color:#454545;
+}
+.evals .evalItem .evalCont{
+  font-size:28rpx;color:#333;
+  line-height:40rpx;
+}
+.evalsTotal{
+  display:flex;align-items: center;justify-content: flex-end;
+  height:88rpx;line-height:88rpx;padding:0 20rpx;
+  color:#8a8a8b;font-size:28rpx;
+}
+.evalsTotal image{
+  width:25rpx;height:25rpx;padding-left:15rpx;
+}
+.copyRight{
+  color:#b6b3b6;font-size:24rpx;text-align:center;
+  padding:180rpx 0 45rpx;
+}
+.goPay{
+  width:186rpx;height:88rpx;line-height:88rpx;padding:0 64rpx 0 20rpx;
+  position:fixed;top:50%;right:-44rpx;transform:translateY(-50%);
+  background-color:#413f40;border-radius:44rpx;overflow:hidden;
+  color:#fff;text-align:right;font-size:32rpx;
+  display:flex;align-items: center;
+}
+.goPay image{
+  width:75rpx;height:75rpx;
+}

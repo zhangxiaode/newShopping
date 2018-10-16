@@ -125,14 +125,32 @@
         </view>
       </view>
       <view class="evals">
-        <view class="evalsItem">
-          
+        <view class="evalItem">
+          <view class="evalUser">
+            <image class="evalPhoto" src="../../assets/item.jpg"></image>
+            <view class="evalInfo">
+              <view class="evalName">森娜</view>
+              <view class="evalDate">2018-10-20 11:00</view>
+            </view>
+            <view class="assess">好评</view>
+          </view>
+          <view class="evalCont">相当不错，环境不错，菜品一流</view>
+        </view>
+        <view class="evalItem">
+          <view class="evalUser">
+            <image class="evalPhoto" src="../../assets/item.jpg"></image>
+            <view class="evalInfo">
+              <view class="evalName">森娜</view>
+              <view class="evalDate">2018-10-20 11:00</view>
+            </view>
+            <view class="assess">好评</view>
+          </view>
+          <view class="evalCont">相当不错，环境不错，菜品一流</view>
         </view>
       </view>
+      <view class="evalsTotal">共有802条评价 查看全部评价 <image src="../../assets/right.svg"></image></view>
     </view>
-    <view class="copyRight">
-    </view>
-    <view class="goPay">
-    </view>
+    <view class="copyRight">金风凝香 提供技术支持</view>
+    <view class="goPay"><image src="../../assets/carteIcon.svg"></image> 去点菜</view>
   </scroll-view>
 </view>
