@@ -28,40 +28,7 @@ Page({
         arrowR: '',
         icon: '../../assets/tagIcon.svg'
       }
-    ],
-    menuIndex: 0,
-    menuList: [
-      {
-        value:'浆果类',
-        id: 'berry'
-      },
-      {
-        value:'柑橘类',
-        id: 'citrus'
-      },
-      {
-        value:'核果',
-        id: 'nuclear'
-      },
-      {
-        value:'仁果',
-        id: 'benevolence'
-      },
-      {
-        value:'瓜类',
-        id: 'melon'
-      },
-      {
-        value:'其他',
-        id: 'others'
-      }
-    ],
-    orientate: 'berry',
-    cookList: app.globalData.cookList,
-    price: 0,
-    cartList: app.globalData.cartList,
-    showList:false,
-    scrollData: []
+    ]
   },
   goAbout() {
     wx.navigateTo({

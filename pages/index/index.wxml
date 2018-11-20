@@ -26,6 +26,11 @@
         <image class="tel" src="../../assets/tel.svg"></image>
       </view>
     </view>
+    <view class="section navList {{showNav ? 'showNav' : ''}}">
+      <view class="navItem">本店美食</view>
+      <view class="navItem">会员详情</view>
+      <view class="navItem">店铺详情</view>
+    </view>
     <view class="section goodsList">
       <view class="sectionHd">本店美食</view>
       <view class="goodsBody">
@@ -66,7 +71,7 @@
       <view class="score">我在本店成长值267分，升级还需1193分</view>
     </view>
     <view class="section shopDetail">
-      <view class="sectionHd">会员详情</view>
+      <view class="sectionHd">店铺详情</view>
       <view class="banner">
         <image src="http://www.zhangxiaode.com/wxImgs/乌梅.jpg"></image>
       </view>

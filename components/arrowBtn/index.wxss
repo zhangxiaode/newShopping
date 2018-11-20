@@ -9,16 +9,16 @@
 }
 .arrowBtn .arrowL image{
   width:36rpx;height:36rpx;
-  padding-right:10rpx;
+  padding-right:5rpx;
 }
 .arrowBtn .arrowL text{
-  font-size:36rpx;font-family:"Microsoft Yahei";
+  font-size:28rpx;font-family:"Microsoft Yahei";
 }
 .arrowBtn .arrowR{
   display:flex;align-items: center;
 }
 .arrowBtn .arrowR text{
-  font-size:32rpx;color:#999;
+  font-size:26rpx;color:#999;
   padding-right:10rpx;
 }
 .arrowBtn .arrowR image{
