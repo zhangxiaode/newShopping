@@ -1,6 +1,9 @@
 <!--index.wxml-->
 <view class="order">
-  <scroll-view scroll-y scroll-with-animation>
+  <view class="section navList {{showNav ? 'showNav' : ''}}">
+    <view  wx:for="{{navList}}" wx:key="{{index}}" class="navItem {{item.index == currentNav ? 'currentNav' : ''}}" data-anchor="{{item.anchor}}" data-index="{{item.index}}" bindtap="changeAnchor">{{item.name}}</view>
+  </view>
+  <scroll-view style="height:{{windowHeight}}px" scroll-y scroll-into-view="{{scrollTo}}" scroll-with-animation bindscroll="scroll">
     <view class="section orderTop">
       <view class="welcome">
         <text>欢迎光临</text>
@@ -10,85 +13,60 @@
       </view>
       <view class="shopSynopsis">
         <view class="shopInfo">
-          <image src="../../assets/logo.png"></image>
+          <image src="{{synopsis.logo}}"></image>
           <view class="shopPro">
-            <view class="shopName">春暖花开</view>
-            <view class="shopDes">51~100元 杭帮菜，粤菜</view>
+            <view class="shopName">{{synopsis.shopName}}</view>
+            <view class="shopDes">{{synopsis.shopDes}}</view>
           </view>
         </view>
         <view class="attention">
-          <image src="../../assets/hotHeart.svg"></image>
+          <image wx:if="synopsis.attention==1" src="../../assets/hotHeart.svg"></image>
+          <image wx:else src="../../assets/hotHeart.svg"></image>
         </view>
       </view>
-      <view class="shopPlace">
-        <image class="place" src="../../assets/place.svg"></image>
-        <text>浙江省杭州市西湖区西溪湿地公园慢生活街区</text>
-        <image class="tel" src="../../assets/tel.svg"></image>
+      <view class="shopPlace" id="shopPlace">
+        <image class="place" bindtap="goMap" src="../../assets/place.svg"></image>
+        <text bindtap="goMap">{{shopPlace}}</text>
+        <image class="tel" bindtap="call" src="../../assets/tel.svg"></image>
       </view>
     </view>
-    <view class="section navList {{showNav ? 'showNav' : ''}}">
-      <view class="navItem">本店美食</view>
-      <view class="navItem">会员详情</view>
-      <view class="navItem">店铺详情</view>
-    </view>
+    <view id="goodsList"></view>
     <view class="section goodsList">
       <view class="sectionHd">本店美食</view>
       <view class="goodsBody">
-        <view class="goodsItem">
-          <image src="http://www.zhangxiaode.com/wxImgs/乌梅.jpg"></image>
-          <view class="goodsName">椒麻鸡</view>
-          <view class="goodsPrice">¥98.00</view>
-        </view>
-        <view class="goodsItem">
-          <image src="http://www.zhangxiaode.com/wxImgs/乌梅.jpg"></image>
-          <view class="goodsName">椒麻鸡</view>
-          <view class="goodsPrice">¥98.00</view>
-        </view>
-        <view class="goodsItem">
-          <image src="http://www.zhangxiaode.com/wxImgs/乌梅.jpg"></image>
-          <view class="goodsName">椒麻鸡</view>
-          <view class="goodsPrice">¥98.00</view>
-        </view>
-        <view class="goodsItem">
-          <image src="http://www.zhangxiaode.com/wxImgs/乌梅.jpg"></image>
-          <view class="goodsName">椒麻鸡</view>
-          <view class="goodsPrice">¥98.00</view>
+        <view class="goodsItem" wx:for="{{goodsList}}" wx:key="{{index}}" data-disheId="{{item.disheId}}" bindtap="goDetail">
+          <image src="{{item.photo}}"></image>
+          <view class="goodsName">{{item.goodsName}}</view>
+          <view class="goodsPrice">¥{{item.goodsPrice}}</view>
         </view>
       </view>
-      <view class="goCarte">进入菜单</view>
+      <view class="goCarte" bindtap="goCarte">进入菜单</view>
     </view>
-    <view class="section personal">
+    <view id="personal"></view>
+    <view class="section personal" bindtap="goUserCenter">
       <view class="sectionHd">会员详情</view>
       <view class="weLevel">
-        <view class="wel">欢迎回来，金风凝香</view>
+        <view class="wel">欢迎回来，{{userInfo.userName}}</view>
         <view class="level">
           <view class="levelIcon">
             <image src="../../assets/levelIcon.svg"></image>
           </view>
-          <text>平民</text>
+          <text>{{userInfo.grade == 1 ? "平民" : ""}}</text>
         </view>
       </view>
-      <view class="score">我在本店成长值267分，升级还需1193分</view>
+      <view class="score">我在本店成长值{{userInfo.fraction}}分，升级还需{{userInfo.needFrac}}分</view>
     </view>
+    <view id="shopDetail"></view>
     <view class="section shopDetail">
       <view class="sectionHd">店铺详情</view>
       <view class="banner">
-        <image src="http://www.zhangxiaode.com/wxImgs/乌梅.jpg"></image>
+        <image src="{{shopDetail.shopPhoto}}"></image>
       </view>
-      <view class="shopIntro">餐厅坐落在仙境般的西溪湿地s生态公园,让顾客在品尝美味同时也可以欣赏西溪湿地的美丽景色</view>
+      <view class="shopIntro">{{shopDetail.shopIntro}}</view>
       <view class="shopWrap">
-        <arrowBtn wx:for="{{shopInfo}}" wx:key="index" arrowData="{{item}}" bindtap="goAbout"></arrowBtn>
+        <arrowBtn wx:for="{{shopDetail.shopInfo}}" wx:key="index" arrowData="{{item}}" data-info="{{item}}" bindtap="handleArrow"></arrowBtn>
         <view class="tagItems">
-          <text class="tagItem">老字号</text>
-          <text class="tagItem">有景观台</text>
-          <text class="tagItem">无线上网</text>
-          <text class="tagItem">可以刷卡</text>
-          <text class="tagItem">免费停车</text>
-          <text class="tagItem">微信支付</text>
-          <text class="tagItem">有露天位</text>
-          <text class="tagItem">支付宝支付</text>
-          <text class="tagItem">杭帮菜</text>
-          <text class="tagItem">粤菜</text>
+          <text class="tagItem" wx:for="{{shopDetail.tagItems}}" wx:key="{{index}}">{{item}}</text>
         </view>
       </view>
     </view>
@@ -98,64 +76,41 @@
         <view class="starItem">
           <view class="starType">菜肴口味</view>
           <view class="star">
-            <image src="../../assets/star.svg"></image>
-            <image src="../../assets/star.svg"></image>
-            <image src="../../assets/star.svg"></image>
-            <image src="../../assets/star.svg"></image>
-            <image src="../../assets/star.svg"></image>
+            <image wx:for="{{evalStar.flavor}}" wx:key="{{index}}" src="../../assets/star.svg"></image>
           </view>
-          <view class="starLevel">4.9</view>
+          <view class="starLevel">{{evalStar.flavor}}</view>
         </view>
         <view class="starItem">
           <view class="starType">上菜速度</view>
           <view class="star">
-            <image src="../../assets/star.svg"></image>
-            <image src="../../assets/star.svg"></image>
-            <image src="../../assets/star.svg"></image>
-            <image src="../../assets/star.svg"></image>
-            <image src="../../assets/star.svg"></image>
+            <image wx:for="{{evalStar.speed}}" wx:key="{{index}}" src="../../assets/star.svg"></image>
           </view>
-          <view class="starLevel">4.9</view>
+          <view class="starLevel">{{evalStar.speed}}</view>
         </view>
         <view class="starItem">
           <view class="starType">就餐环境</view>
           <view class="star">
-            <image src="../../assets/star.svg"></image>
-            <image src="../../assets/star.svg"></image>
-            <image src="../../assets/star.svg"></image>
-            <image src="../../assets/star.svg"></image>
-            <image src="../../assets/star.svg"></image>
+            <image wx:for="{{evalStar.environmental}}" wx:key="{{index}}" src="../../assets/star.svg"></image>
           </view>
-          <view class="starLevel">5</view>
+          <view class="starLevel">{{evalStar.environmental}}</view>
         </view>
       </view>
       <view class="evals">
-        <view class="evalItem">
+        <view class="evalItem" wx:for="{{evalsInfo.evals}}" wx:key="{{index}}">
           <view class="evalUser">
-            <image class="evalPhoto" src="../../assets/item.jpg"></image>
+            <image class="evalPhoto" src="{{item.evalPhoto}}"></image>
             <view class="evalInfo">
-              <view class="evalName">森娜</view>
-              <view class="evalDate">2018-10-20 11:00</view>
+              <view class="evalName">{{item.evalName}}</view>
+              <view class="evalDate">{{item.evalDate}}</view>
             </view>
-            <view class="assess">好评</view>
+            <view class="assess">{{item.assess}}</view>
           </view>
-          <view class="evalCont">相当不错，环境不错，菜品一流</view>
-        </view>
-        <view class="evalItem">
-          <view class="evalUser">
-            <image class="evalPhoto" src="../../assets/item.jpg"></image>
-            <view class="evalInfo">
-              <view class="evalName">森娜</view>
-              <view class="evalDate">2018-10-20 11:00</view>
-            </view>
-            <view class="assess">好评</view>
-          </view>
-          <view class="evalCont">相当不错，环境不错，菜品一流</view>
+          <view class="evalCont">{{item.evalCont}}</view>
         </view>
       </view>
-      <view class="evalsTotal">共有802条评价 查看全部评价 <image src="../../assets/right.svg"></image></view>
+      <view class="evalsTotal" bindtap="goEvaluate">共有{{evalsInfo.total}}条评价 查看全部评价 <image src="../../assets/right.svg"></image></view>
     </view>
     <view class="copyRight">金风凝香 提供技术支持</view>
-    <view class="goPay"><image src="../../assets/carteIcon.svg"></image> 去点菜</view>
+    <view class="goPay" bindtap="goCarte"><image src="../../assets/carteIcon.svg"></image> 去点菜</view>
   </scroll-view>
 </view>

@@ -3,8 +3,76 @@ const app = getApp()
 
 Page({
   data: {
+    myVip:{
+      showArrow: true,
+      arrowL: '我的会员卡',
+      arrowR: '',
+      icon: '../../assets/timeIcon.svg'
+    },
+    coupon: {
+      showArrow: true,
+      arrowL: '我的优惠券',
+      arrowR: '',
+      icon: '../../assets/timeIcon.svg'
+    },
+    myOrder: {
+      showArrow: true,
+      arrowL: '我的订单',
+      arrowR: '',
+      icon: '../../assets/timeIcon.svg'
+    },
+    myPlace: {
+      showArrow: true,
+      arrowL: '收货地址管理',
+      arrowR: '',
+      icon: '../../assets/timeIcon.svg'
+    },
+    activities: {
+      showArrow: true,
+      arrowL: '商家活动',
+      arrowR: '积分商城',
+      icon: '../../assets/timeIcon.svg'
+    },
+    personalInfo: {
+      showArrow: true,
+      arrowL: '个人信息',
+      arrowR: '未设置',
+      icon: '../../assets/timeIcon.svg'
+    },
+    myInfo: {
+      nickName: "",
+      avatarUrl: "",
+      grade: 1,
+      fraction: 268
+    }
   },
   onLoad(){
+    // wx.getUserInfo()
+    // this.setData({
+    //   nickName: res.userInfo.avatarUrl,
+    //   avatarUrl: res.userInfo.nickName
+    // })
+    // wx.getSetting({
+    //   success(res) {
+    //     if (res.authSetting['scope.userInfo']) {
+    //       // 已经授权，可以直接调用 getUserInfo 获取头像昵称
+    //       wx.getUserInfo({
+    //         success: function (res) {
+    //           console.log(res.userInfo)
+    //         }
+    //       })
+    //     }
+    //   }
+    // })
+    // app.getSetting().then(res => {
+    //   if (res.authSetting['scope.userInfo']) {
+    //     app.getUserInfo(res => {
+    //       console.log(res);
+    //     }).catch(err => {
+    //       console.log(err);
+    //     })
+    //   }
+    // })
   },
   onShow() {
   }

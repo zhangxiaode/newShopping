@@ -1,8 +1,12 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/welcome/index",
-    "pages/userCenter/index"
+    "pages/userCenter/index",
+    "pages/map/index",
+    "pages/detail/index",
+    "pages/carte/index",
+    "pages/evaluate/index",
+    "pages/welcome/index"
   ],
   "tabBar": {
     "backgroundColor": "#35353E",
@@ -14,7 +18,13 @@
         "pagePath": "pages/index/index",
         "iconPath": "assets/home.png",
         "selectedIconPath": "assets/homeHover.png",
-        "text": "订单"
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/carte/index",
+        "iconPath": "assets/home.png",
+        "selectedIconPath": "assets/homeHover.png",
+        "text": "菜单"
       },
       {
         "pagePath": "pages/userCenter/index",

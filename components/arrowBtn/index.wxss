@@ -9,7 +9,7 @@
 }
 .arrowBtn .arrowL image{
   width:36rpx;height:36rpx;
-  padding-right:5rpx;
+  padding-right:10rpx;
 }
 .arrowBtn .arrowL text{
   font-size:28rpx;font-family:"Microsoft Yahei";
