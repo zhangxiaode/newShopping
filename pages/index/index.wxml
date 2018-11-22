@@ -3,11 +3,15 @@
   <view class="section navList {{showNav ? 'showNav' : ''}}">
     <view  wx:for="{{navList}}" wx:key="{{index}}" class="navItem {{item.index == currentNav ? 'currentNav' : ''}}" data-anchor="{{item.anchor}}" data-index="{{item.index}}" bindtap="changeAnchor">{{item.name}}</view>
   </view>
+  <view wx:if="{{showShare}}" class="shareDialog" data-share="{{false}}" bindtap="handleShare">
+    <image src="/assets/arrow.png"></image>
+    <view class="shareTxt">选择转发就可以发送给好友或群</view>
+  </view>
   <scroll-view style="height:{{windowHeight}}px" scroll-y scroll-into-view="{{scrollTo}}" scroll-with-animation bindscroll="scroll">
     <view class="section orderTop">
       <view class="welcome">
         <text>欢迎光临</text>
-        <view class="share">
+        <view class="share" data-share="{{true}}" bindtap="handleShare">
           <image src="../../assets/share.svg"></image>
         </view>
       </view>
@@ -19,9 +23,8 @@
             <view class="shopDes">{{synopsis.shopDes}}</view>
           </view>
         </view>
-        <view class="attention">
-          <image wx:if="synopsis.attention==1" src="../../assets/hotHeart.svg"></image>
-          <image wx:else src="../../assets/hotHeart.svg"></image>
+        <view class="attention" bindtap="collect">
+          <image src="{{synopsis.attention==1 ? '../../assets/hotHeart.svg' : '../../assets/heart.svg'}}"></image>
         </view>
       </view>
       <view class="shopPlace" id="shopPlace">

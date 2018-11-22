@@ -4,7 +4,27 @@ const app = getApp()
 
 Page({
   data: {
+    goodsFlavor: {
+      showArrow: true,
+      arrowL: '请选择做法',
+      arrowR: '',
+      icon: ''
+    },
+    numFocus: false,
+    cartNum: 1
   },
-  onLoad: function () {
+  handleFocus() {
+    this.setData({
+      numFocus: true
+    })
+  },
+  numBlur() {
+    this.setData({
+      numFocus: true
+    })
+  },
+  onLoad() {
+  },
+  onShow() {
   }
 })

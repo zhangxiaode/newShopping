@@ -3,6 +3,7 @@ const app = getApp()
 // import ajax from "../../utils/ajax"
 Page({
   data: {
+    showShare: false,
     showNav: false,
     scrollTo: "",
     windowHeight: 0,
@@ -123,14 +124,28 @@ Page({
       total: 80
     }
   },
+  handleShare(event) {
+    this.setData({
+      showShare: event.currentTarget.dataset.share
+    })
+  },
+  collect() {
+    this.setData({
+      "synopsis.attention": !this.data.synopsis.attention
+    })
+  },
   call() {
     wx.makePhoneCall({
       phoneNumber: '15057159482',
     })
   },
   goMap() {
-    wx.navigateTo({
-      url: "/pages/map/index"
+    wx.openLocation({
+      name: "亢亢点单",
+      address: "杭州市西湖区骆家庄西苑二区",
+      latitude: 30.285753,
+      longitude: 120.091783,
+      scale: 18
     })
   },
   goDetail(event) {

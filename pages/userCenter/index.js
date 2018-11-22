@@ -7,37 +7,37 @@ Page({
       showArrow: true,
       arrowL: '我的会员卡',
       arrowR: '',
-      icon: '../../assets/timeIcon.svg'
+      icon: '../../assets/myVipIcon.svg'
     },
     coupon: {
       showArrow: true,
       arrowL: '我的优惠券',
       arrowR: '',
-      icon: '../../assets/timeIcon.svg'
+      icon: '../../assets/couponIcon.svg'
     },
     myOrder: {
       showArrow: true,
       arrowL: '我的订单',
       arrowR: '',
-      icon: '../../assets/timeIcon.svg'
+      icon: '../../assets/myOrderIcon.svg'
     },
     myPlace: {
       showArrow: true,
       arrowL: '收货地址管理',
       arrowR: '',
-      icon: '../../assets/timeIcon.svg'
+      icon: '../../assets/myPlaceIcon.svg'
     },
     activities: {
       showArrow: true,
       arrowL: '商家活动',
       arrowR: '积分商城',
-      icon: '../../assets/timeIcon.svg'
+      icon: '../../assets/activitiesIcon.svg'
     },
     personalInfo: {
       showArrow: true,
       arrowL: '个人信息',
       arrowR: '未设置',
-      icon: '../../assets/timeIcon.svg'
+      icon: '../../assets/persInfoIcon.svg'
     },
     myInfo: {
       nickName: "",

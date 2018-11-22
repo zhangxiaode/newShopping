@@ -3,5 +3,5 @@ page{
   height:100%;
 }
 .evaluate{
-  height:100%;overflow:hidden;
+  height:100%;
 }

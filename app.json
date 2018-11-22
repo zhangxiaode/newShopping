@@ -1,9 +1,8 @@
 {
   "pages": [
+    "pages/detail/index",
     "pages/index/index",
     "pages/userCenter/index",
-    "pages/map/index",
-    "pages/detail/index",
     "pages/carte/index",
     "pages/evaluate/index",
     "pages/welcome/index"

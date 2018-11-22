@@ -3,5 +3,5 @@ page{
   height:100%;
 }
 .carte{
-  height:100%;overflow:hidden;
+  height:100%;
 }

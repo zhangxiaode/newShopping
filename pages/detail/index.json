@@ -1,5 +1,6 @@
 {
   "component": true,
   "usingComponents": {
+    "arrowBtn": "/components/arrowBtn/index"
   }
 }

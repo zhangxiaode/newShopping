@@ -1,4 +1,48 @@
 <!--index.wxml-->
 <view class="detail">
-  detail
+  <view class="goodsPhoto">
+    <image src="/assets/item.jpg"></image>
+    <view class="likes">
+      <image src="/assets/like.svg"></image>
+      <text>3人喜欢</text>
+    </view>
+  </view>
+  <view class="goodsInfo">
+    <view class="goodsName">千岛湖鱼头</view>
+    <view class="goodsSales">月售222份</view>
+    <view class="price">
+      <text>￥ 168.00/份</text>
+      <view class="goodsEvals">
+        <image src="/assets/pungentIcon.svg"></image>
+        <image src="/assets/pungentIcon.svg"></image>
+        <image src="/assets/goodIcon.svg"></image>
+        <image src="/assets/goodIcon.svg"></image>
+        <image src="/assets/goodIcon.svg"></image>
+      </view>
+    </view>
+  </view>
+  <view class="goodsFlavor">
+    <view class="arrowBtnWrap">
+      <arrowBtn arrowData="{{goodsFlavor}}"></arrowBtn>
+    </view>
+  </view>
+  <view class="goodsDetail">
+    <view class="goodsDetailHd">商品详情</view>
+    <view class="goodsDetailBd">正常情况下出菜时间30分钟左右</view>
+  </view>
+  <view class="copyRight">金风凝香 提供技术支持</view>
+  <view class="addCart">
+    <text class="cartTit">数量</text>
+    <view class="nums">
+      <view class="numsBtn minus">
+        <image src="/assets/minus.svg"></image>
+      </view>
+      <input wx:if="{{numFocus}}" value="{{cartNum}}" bindblur="numBlur" />
+      <view wx:else class="replaceInput" bindtap="handleFocus">{{cartNum}}份</view>
+      <view class="numsBtn plus">
+        <image src="/assets/plus.svg"></image>
+      </view>
+    </view>
+    <view class="addCartBtn">加入购物车</view>
+  </view>
 </view>

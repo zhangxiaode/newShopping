@@ -2,7 +2,7 @@
 <view class="userCenter">
   <view class="userInfo">
     <view class="userItem myGrade">
-      <image src="../../assets/timeIcon.svg"></image>
+      <image src="../../assets/gradeIcon.svg"></image>
       <view class="infoName">当前等级</view>
       <view class="infoValue">V{{myInfo.grade}}平民</view>
     </view>
@@ -14,7 +14,7 @@
       <view class="infoValue">立即绑定手机号</view>
     </view>
     <view class="userItem myIntegral">
-      <image src="../../assets/timeIcon.svg"></image>
+      <image src="../../assets/integralIcon.svg"></image>
       <view class="infoName">当前积分</view>
       <view class="infoValue">{{myInfo.fraction}}</view>
     </view>
