@@ -18,10 +18,29 @@ Page({
       numFocus: true
     })
   },
+  changeNum(event) {
+    this.setData({
+      cartNum: parseInt(event.detail.value)
+    })
+  },
   numBlur() {
     this.setData({
-      numFocus: true
+      numFocus: false
     })
+  },
+  handleMinus() {
+    if (this.data.cartNum > 0) {
+      this.setData({
+        cartNum: this.data.cartNum - 1
+      })
+    }
+  },
+  handlePlus() {
+    if (this.data.cartNum < 999) {
+      this.setData({
+        cartNum: this.data.cartNum+1
+      })
+    }
   },
   onLoad() {
   },

@@ -34,12 +34,12 @@
   <view class="addCart">
     <text class="cartTit">数量</text>
     <view class="nums">
-      <view class="numsBtn minus">
+      <view class="numsBtn minus {{cartNum < 1 ? 'disabled' : ''}}" bindtap="handleMinus">
         <image src="/assets/minus.svg"></image>
       </view>
-      <input wx:if="{{numFocus}}" value="{{cartNum}}" bindblur="numBlur" />
+      <input wx:if="{{numFocus}}" placeholder="0" maxlength='3' type="number" value="{{cartNum}}" cursor-spacing="100" focus="{{numFocus}}" bindinput="changeNum" bindblur="numBlur" />
       <view wx:else class="replaceInput" bindtap="handleFocus">{{cartNum}}份</view>
-      <view class="numsBtn plus">
+      <view class="numsBtn plus {{cartNum >= 999 ? 'disabled' : ''}}" bindtap="handlePlus">
         <image src="/assets/plus.svg"></image>
       </view>
     </view>
