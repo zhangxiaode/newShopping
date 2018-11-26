@@ -1,0 +1,4 @@
+<!--index.wxml-->
+<view class="myPlaces">
+  myPlaces
+</view>

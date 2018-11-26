@@ -1,4 +1,8 @@
 <!--index.wxml-->
-<view class="evaluate">
-  evaluate
-</view>
+<scroll-view class="evaluate" scroll-y style="height:{{windowHeight}}px" bindscrolltolower="getMore">
+  <view class="evalWrap">
+    <view class="evalHd">顾客评价</view>
+    <evalItem wx:for="{{evalData}}" wx:key="index" evalData="{{item}}"></evalItem>
+    <view class="showMore" bindtap='getMore'>{{showMore ? '加载更多' : '没有更多了'}}</view>
+  </view>
+</scroll-view>

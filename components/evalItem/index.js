@@ -3,15 +3,16 @@ Component({
     multipleSlots: true // 在组件定义时的选项中启用多slot支持
   },
   properties: {
-    arrowData: Object
+    evalData: Object
     /**
-    arrowData: {
-      showArrow: true,
-      arrowL: '',
-      arrowR: '',
-      icon: false
+    evalData: {
+      evalPhoto: "",
+      evalName: "",
+      assess: 2,
+      evalCont: "",
+      evalDate: ""
     }
-     */
+    */
   },
   data: {
   },

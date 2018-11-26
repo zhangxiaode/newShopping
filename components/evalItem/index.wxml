@@ -1,0 +1,18 @@
+<view class="evalItem">
+  <view class="evalMan">
+    <view class="evalInfo">
+      <image class="evalPhoto" src="{{evalData.evalPhoto}}"></image>
+      <text class="evalName">{{evalData.evalName}}</text>
+    </view>
+    <view class="assess">
+      <image src="{{evalData.assess == 2 ? '/assets/item.jpg' : evalData.assess == 1 ? '/assets/item.jpg' : '/assets/item.jpg'}}"></image>
+      <text>{{evalData.assess == 2 ? "好评" : evalData.assess == 1 ? "中评" : "差评"}}</text>
+    </view>
+  </view>
+  <view class="evalCont">
+    {{evalData.evalCont}}
+  </view>
+  <view class="evalDate">
+    {{evalData.evalDate}}
+  </view>
+</view>

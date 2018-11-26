@@ -24,6 +24,9 @@ page{
   font-size:30rpx;text-align:center;color:#fff;
   float:left;line-height:60rpx;
 }
+.goodsPhoto .liked text{
+  color:#EB473D;
+}
 .goodsInfo{
   padding:0 20rpx;background:#fff;
 }

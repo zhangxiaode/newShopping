@@ -1,0 +1,31 @@
+/**index.wxss**/
+.evalItem {
+  border-bottom:dashed 2rpx #cfcfcf;
+  padding: 0 20rpx;
+}
+.evalItem .evalMan{
+  display:flex;justify-content:space-between;align-items:center;
+  padding: 20rpx 0;
+}
+.evalItem .evalInfo,.evalItem .assess{
+  display:flex;justify-content:flex-start;align-items:center;
+  height:70rpx;
+}
+.evalItem .evalInfo .evalPhoto{
+  width:70rpx;height:70rpx;
+  border-radius:35rpx;
+}
+.evalItem .evalInfo .evalName,.evalItem .assess text{
+  font-size:26rpx;color:#868686;
+  padding-left:10rpx;
+}
+.evalItem .assess image{
+  width:30rpx;height:30rpx;
+}
+.evalItem .evalCont{
+  font-size:28rpx;line-height:1.5;
+}
+.evalItem .evalDate{
+  line-height:50rpx;padding-bottom:20rpx;
+  font-size:22rpx;color:#7a7a79;
+}

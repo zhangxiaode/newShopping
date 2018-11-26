@@ -11,7 +11,13 @@ Page({
       icon: ''
     },
     numFocus: false,
-    cartNum: 1
+    cartNum: 1,
+    changeLike: 1
+  },
+  changeLike() {
+    this.setData({
+      changeLike: this.data.changeLike == 1 ? 0 : 1
+    })
   },
   handleFocus() {
     this.setData({

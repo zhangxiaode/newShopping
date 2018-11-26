@@ -1,11 +1,26 @@
 {
   "pages": [
-    "pages/detail/index",
-    "pages/index/index",
-    "pages/userCenter/index",
+    "pages/vip/index",
+    "pages/myGrade/index",
+    "pages/getGrade/index",
+    "pages/userInfo/index",
+    "pages/myIntegral/index",
+    "pages/myCards/index",
+    "pages/myCoupon/index",
+    "pages/myOrders/index",
+    "pages/myPlaces/index",
+    "pages/activities/index",
+
     "pages/carte/index",
-    "pages/evaluate/index",
-    "pages/welcome/index"
+    "pages/myCart/index",
+    "pages/hot/index",
+    "pages/dishOrders/index",
+
+    "pages/welcome/index",
+    "pages/index/index",
+    "pages/detail/index",
+    "pages/userCenter/index",
+    "pages/evaluate/index"
   ],
   "tabBar": {
     "backgroundColor": "#35353E",

@@ -1,0 +1,7 @@
+/**index.wxss**/
+page{
+  height:100%;
+}
+.myCoupon{
+  height:100%;
+}

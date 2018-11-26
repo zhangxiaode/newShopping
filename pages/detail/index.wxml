@@ -2,8 +2,8 @@
 <view class="detail">
   <view class="goodsPhoto">
     <image src="/assets/item.jpg"></image>
-    <view class="likes">
-      <image src="/assets/like.svg"></image>
+    <view class="likes {{changeLike == 1 ? 'liked' : ''}}" bindtap="changeLike">
+      <image src="{{changeLike == 0 ? '/assets/like.svg' : '/assets/liked.svg'}}"></image>
       <text>3人喜欢</text>
     </view>
   </view>
