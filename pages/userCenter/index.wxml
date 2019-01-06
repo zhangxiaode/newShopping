@@ -1,36 +1,36 @@
 <!--index.wxml-->
 <view class="userCenter">
   <view class="userInfo">
-    <view class="userItem myGrade">
+    <view class="userItem myGrade" data-url="/pages/vip/index" bindtap="switchPage">
       <image src="../../assets/gradeIcon.svg"></image>
       <view class="infoName">当前等级</view>
       <view class="infoValue">V{{myInfo.grade}}平民</view>
     </view>
-    <view class="userItem userItemBig myInfo">
+    <view class="userItem userItemBig myInfo" data-url="/pages/userInfo/index" bindtap="switchPage">
       <!-- <image src="{{myInfo.avatarUrl}}"></image> -->
       <!-- <view class="infoName">{{myInfo.nickName}}</view> -->
       <open-data class="infoPhoto" type="userAvatarUrl"></open-data>
       <open-data class="infoName" type="userNickName"></open-data>
       <view class="infoValue">立即绑定手机号</view>
     </view>
-    <view class="userItem myIntegral">
+    <view class="userItem myIntegral" data-url="/pages/myIntegral/index" bindtap="switchPage">
       <image src="../../assets/integralIcon.svg"></image>
       <view class="infoName">当前积分</view>
       <view class="infoValue">{{myInfo.fraction}}</view>
     </view>
   </view>
   <view class="section">
-    <arrowBtn arrowData="{{myVip}}"></arrowBtn>
+    <arrowBtn arrowData="{{myVip}}" data-url="/pages/myCards/index" bindtap="switchPage"></arrowBtn>
   </view>
   <view class="section">
-    <arrowBtn arrowData="{{coupon}}"></arrowBtn>
-    <arrowBtn arrowData="{{myOrder}}"></arrowBtn>
-    <arrowBtn arrowData="{{myPlace}}"></arrowBtn>
+    <arrowBtn arrowData="{{coupon}}" data-url="/pages/myCoupon/index" bindtap="switchPage"></arrowBtn>
+    <arrowBtn arrowData="{{myOrder}}" data-url="/pages/myOrders/index" bindtap="switchPage"></arrowBtn>
+    <arrowBtn arrowData="{{myPlace}}" data-url="/pages/myPlaces/index" bindtap="switchPage"></arrowBtn>
   </view>
   <view class="section">
-    <arrowBtn arrowData="{{activities}}"></arrowBtn>
+    <arrowBtn arrowData="{{activities}}" data-url="/pages/activities/index" bindtap="switchPage"></arrowBtn>
   </view>
   <view class="section">
-    <arrowBtn arrowData="{{personalInfo}}"></arrowBtn>
+    <arrowBtn arrowData="{{personalInfo}}" data-url="/pages/userInfo/index" bindtap="switchPage"></arrowBtn>
   </view>
 </view>

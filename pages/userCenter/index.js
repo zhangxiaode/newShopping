@@ -46,6 +46,11 @@ Page({
       fraction: 268
     }
   },
+  switchPage(event) {
+    wx.navigateTo({
+      url: event.currentTarget.dataset.url
+    })
+  },
   onLoad(){
     // wx.getUserInfo()
     // this.setData({

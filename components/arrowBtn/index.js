@@ -4,14 +4,6 @@ Component({
   },
   properties: {
     arrowData: Object
-    /**
-    arrowData: {
-      showArrow: true,
-      arrowL: '',
-      arrowR: '',
-      icon: false
-    }
-     */
   },
   data: {
   },
