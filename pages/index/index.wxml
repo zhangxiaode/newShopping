@@ -114,6 +114,6 @@
       <view class="evalsTotal" bindtap="goEvaluate">共有{{evalsInfo.total}}条评价 查看全部评价 <image src="../../assets/right.svg"></image></view>
     </view>
     <view class="copyRight">金风凝香 提供技术支持</view>
-    <view class="goPay" bindtap="goCarte"><image src="../../assets/carteIcon.svg"></image> 去点菜</view>
+    <!-- <view class="goPay" bindtap="goCarte"><image src="../../assets/carteIcon.svg"></image> 去点菜</view> -->
   </scroll-view>
 </view>

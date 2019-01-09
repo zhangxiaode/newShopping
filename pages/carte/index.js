@@ -4,6 +4,18 @@ const app = getApp()
 
 Page({
   data: {
+    showMenu: false
+  },
+  openMenus(event) {
+    if (event.currentTarget.dataset.close) {
+      this.setData({
+        showMenu: false
+      })
+    } else {
+      this.setData({
+        showMenu: !this.data.showMenu
+      })
+    }
   },
   onLoad() {
   },

@@ -1,7 +1,11 @@
 {
   "pages": [
-    "pages/userCenter/index",
     
+    "pages/carte/index",
+    "pages/myCart/index",
+    "pages/hot/index",
+    "pages/dishOrders/index",
+
     "pages/vip/index",
     "pages/myGrade/index",
     "pages/getGrade/index",
@@ -13,13 +17,9 @@
     "pages/activities/index",
     "pages/userInfo/index",
 
-    "pages/carte/index",
-    "pages/myCart/index",
-    "pages/hot/index",
-    "pages/dishOrders/index",
-
     "pages/welcome/index",
     "pages/index/index",
+    "pages/userCenter/index",
     "pages/detail/index",
     "pages/evaluate/index"
   ],

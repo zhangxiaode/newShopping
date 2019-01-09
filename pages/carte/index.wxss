@@ -1,7 +1,101 @@
 /**index.wxss**/
-page{
-  height:100%;
+
+page {
+  height: 100%;
 }
-.carte{
-  height:100%;
+
+.carte {
+  background: #dbd1de;
+  position: relative;
+  height: 100%;
+}
+
+.carteWrap {
+}
+
+.carteMenusMask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9;
+  background: rgba(0, 0, 0, 0.65);
+  transition: all 0.3s;
+  opacity: 0;
+}
+
+.showMenuMask {
+  opacity: 1;
+}
+
+.carteMenus {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 10;
+}
+
+.carteMenus .menuList {
+  background: #e3e2e2;
+  width: 0;
+  height: 100%;
+  transition: all 0.3s;
+}
+
+.showMenu .menuList {
+  width: 290rpx;
+}
+
+.carteMenus .openMenus {
+  background: #e3e2e2;
+  width: 60rpx;
+  height: 100rpx;
+  padding-right: 15rpx;
+  position: absolute;
+  top: 50%;
+  right: -74rpx;
+  transform: translateY(-50%);
+  border-top-right-radius: 50%;
+  border-bottom-right-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.carteMenus .openMenus image {
+  width: 35rpx;
+  height: 35rpx;
+}
+
+.carteMenus .openMenus text {
+  font-size: 22rpx;
+  color: #8e8c8f;
+}
+
+.basket {
+  border-radius: 63rpx;
+  border: solid 5rpx #fff;
+  background: rgba(220, 80, 50, 1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 116rpx;
+  height: 116rpx;
+  position: fixed;
+  bottom: 40rpx;
+  right: 30rpx;
+}
+
+.basket image {
+  width: 42rpx;
+  height: 42rpx;
+}
+
+.basket text {
+  font-size: 24rpx;
+  color: #fff;
 }
