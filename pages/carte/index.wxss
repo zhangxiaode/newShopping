@@ -13,6 +13,41 @@ page {
 .carteWrap {
 }
 
+.carteWrap .carteBtns {
+  border-radius: 6rpx;
+  background: #fcfcfd;
+  margin: 40rpx 20rpx;
+  height: 135rpx;
+  display: flex;
+  justify-content: space-between;
+}
+
+.carteWrap .carteBtnsItem {
+  flex: 1;
+  border-left: solid 1rpx #efeff0;
+  border-right: solid 1rpx #efeff0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.carteWrap .carteBtnsItem image {
+  width: 45rpx;
+  height: 45rpx;
+}
+
+.carteWrap .carteBtnsItem text {
+  font-size: 24rpx;
+}
+
+.copyRight {
+  color: #b6b3b6;
+  font-size: 24rpx;
+  text-align: center;
+  padding: 180rpx 0 45rpx;
+}
+
 .carteMenusMask {
   position: absolute;
   top: 0;
@@ -22,11 +57,11 @@ page {
   z-index: 9;
   background: rgba(0, 0, 0, 0.65);
   transition: all 0.3s;
-  opacity: 0;
+  display: none;
 }
 
 .showMenuMask {
-  opacity: 1;
+  display: block;
 }
 
 .carteMenus {

@@ -1,8 +1,23 @@
 <!--index.wxml-->
 <view class="carte">
   <scroll-view class="carteWrap">
-    <view class="carteBtns"></view>
-    <view class="carteList"></view>
+    <view class="carteBtns">
+      <view class="carteBtnsItem">
+        <image src=""></image>
+        <text>随便点</text>
+      </view>
+      <view class="carteBtnsItem">
+        <image src=""></image>
+        <text>热销榜</text>
+      </view>
+      <view class="carteBtnsItem">
+        <image src=""></image>
+        <text>点过的菜</text>
+      </view>
+    </view>
+    <view class="carteList">
+      
+    </view>
     <view class="copyRight">金风凝香 提供技术支持</view>
   </scroll-view>
   <view class="carteMenusMask {{showMenu ? 'showMenuMask' : ''}}" data-close="{{true}}" bindtap='openMenus'></view>
