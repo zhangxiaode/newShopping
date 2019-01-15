@@ -19,20 +19,29 @@ Page({
     }
   },
   onLoad() {
-    wx.login({
-      success(res) {
-        console.log(res)
-      }
-    })
+  },
+  onShow() {
     ajax({
-      url: `/user/findUser`,
+      url: `/apis/findUser`,
       method: "get",
       data: {
       }
-    }).then(res=>{
-      console.log(111,res)
+    }).then(res => {
+      console.log(111, res)
     })
-  },
-  onShow() {
+    wx.login({
+      success(res) {
+        console.log(res)
+        ajax({
+          url: `/apis/login`,
+          method: "get",
+          data: {
+            code: res.code
+          }
+        }).then(response => {
+          console.log(222, response)
+        })
+      }
+    })
   }
 })
