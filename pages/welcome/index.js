@@ -1,44 +1,54 @@
 //index.js
 //获取应用实例
 const app = getApp()
+import ajax from "../../utils/ajax"
 
 Page({
   data: {
   },
-  //事件处理函数
-  bindViewTap: function() {
+  getUserInfo() {
+    wx.login({
+      success(res) {
+        console.log(res)
+        ajax({
+          url: `/apis/login`,
+          method: "get",
+          data: {
+            code: res.code
+          }
+        }).then(response => {
+          console.log(222, response)
+        })
+      }
+    })
   },
-  startRecord() {
-    // console.log(this.pusher)
-    // this.pusher.start()
-    // this.player.play()
-    // wx.chooseVideo({
-    //   maxDuration: 10,
-    //   success: function (res1) {
-    //     app.startOperating("上传中")
-    //     // 这个就是最终拍摄视频的临时路径了
-    //     var tempFilePath = res1.tempFilePath;
-    //   },
-    //   fail: function () {
-    //     console.error("获取本地视频时出错");
-    //   }
-    // })
+  onLoad() {
+    // setTimeout(()=>{
+    //   wx.switchTab({
+    //     url: '../index/index'
+    //   })
+    // },1000)
+    wx.getUserInfo({
+      success(res) {
+        console.log(res)
+        // const nickName = res.userInfo.nickName
+        // const avatarUrl = res.userInfo.avatarUrl //头像
+        // const gender = res.userInfo.gender // 性别 0：未知、1：男、2：女
+        // const country = res.userInfo.country
+        // const province = res.userInfo.province
+        // const city = res.userInfo.city
+        // const language = res.userInfo.language
+      }
+    })
   },
-  endRecord() {
-  },
-  onLoad: function () {
-    setTimeout(()=>{
-      wx.switchTab({
-        url: '../index/index'
-      })
-    },1000)
-
-    // wx.authorize({
-    //   scope: 'scope.userInfo'
-    // })
-    // this.pusher = wx.createLivePusherContext('pusher')
-    // this.player = wx.createLivePusherContext('player')
-
-    // wx.startRecord()
+  onShow() {
+    ajax({
+      url: `/apis/findUser`,
+      method: "get",
+      data: {
+      }
+    }).then(res => {
+      console.log(111, res)
+    })
   }
 })
