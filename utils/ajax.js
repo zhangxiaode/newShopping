@@ -1,4 +1,5 @@
-const baseUrl = 'https://wx.zxdkxl.com'
+// const baseUrl = 'https://wx.zxdkxl.com'
+const baseUrl = 'http://10.100.4.64:9090'
 
 export default ({url, method = 'GET', data = {}}) => {
   return new Promise((resolve, reject) => {

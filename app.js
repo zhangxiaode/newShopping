@@ -1,10 +1,9 @@
 //app.js
-import { getSetting, getUserInfo } from 'utils/index.js'
+// "appid": "wx97333387a0ecdde1",
+// "AppSecret": "daff2f83ceb8329a1bc1987213098f97",
 App({
   data:{
   },
-  getSetting,
-  getUserInfo,
   onLaunch() {
   },
   globalData: {

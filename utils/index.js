@@ -49,8 +49,27 @@ const getUserInfo = () => {
     })
   })
 }
+const login = () => {
+  return new Promise((resolve, reject) => {
+    wx.login({
+      success: (res) => {
+        resolve(res)
+      },
+      fail: (err) => {
+        wx.showLoading({
+          title: '网络错误!'
+        })
+        setTimeout(() => {
+          wx.hideLoading()
+        }, 3000)
+        reject(err)
+      }
+    })
+  })
+}
 module.exports = {
   formatTime,
   getSetting,
-  getUserInfo
+  getUserInfo,
+  login
 }
