@@ -5,7 +5,7 @@ page {
 }
 
 .carte {
-  background: #dbd1de;
+  background: #e5e2ef;
   position: relative;
   height: 100%;
 }
@@ -39,6 +39,44 @@ page {
 
 .carteWrap .carteBtnsItem text {
   font-size: 24rpx;
+}
+
+.carteList {
+}
+
+.carteList .carteBox {
+}
+
+.carteList .carteHd {
+  height: 100rpx;
+  text-align: center;
+}
+
+.carteList .carteHd text {
+  display: inline-block;
+  height: 100rpx;
+  line-height: 100rpx;
+  position: relative;
+  padding: 0 30px;
+}
+
+.carteList .carteHd text:before, .carteList .carteHd text:after {
+  content: "";
+  position: absolute;
+  left: -60rpx;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 3rpx;
+  background: #ceccd7;
+  width: 60rpx;
+}
+
+.carteList .carteHd text:after {
+  left: auto;
+  right: -30px;
+}
+
+.carteList .carteBd {
 }
 
 .copyRight {

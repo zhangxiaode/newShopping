@@ -36,11 +36,11 @@ Page({
     })
   },
   onLoad() {
-    // setTimeout(()=>{
-    //   wx.switchTab({
-    //     url: '../index/index'
-    //   })
-    // },1000)
+    setTimeout(()=>{
+      wx.switchTab({
+        url: '../index/index'
+      })
+    },1000)
   },
   onShow() {
     
