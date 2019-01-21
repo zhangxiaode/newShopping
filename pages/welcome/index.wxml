@@ -3,4 +3,5 @@
   <!-- <image src="../../assets/welcome.jpg"></image> -->
   <button open-type="getUserInfo">获取权限</button>
   <button bindtap="login">登录</button>
+  <button bindtap="login2">getToken</button>
 </view>

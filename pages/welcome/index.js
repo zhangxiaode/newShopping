@@ -24,6 +24,17 @@ Page({
       })
     })
   },
+  login2() {
+    ajax({
+      url: `/apis/login2`,
+      method: "post",
+      data: {
+        code: "aaaa"
+      }
+    }).then(res => {
+      console.log(111, res)
+    })
+  },
   onLoad() {
     // setTimeout(()=>{
     //   wx.switchTab({
@@ -32,13 +43,6 @@ Page({
     // },1000)
   },
   onShow() {
-    ajax({
-      url: `/apis/findUser`,
-      method: "get",
-      data: {
-      }
-    }).then(res => {
-      console.log(111, res)
-    })
+    
   }
 })
