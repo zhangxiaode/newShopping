@@ -1,5 +1,7 @@
 {
   "pages": [
+    "pages/welcome/index",
+    
     "pages/carte/index",
     "pages/myCart/index",
     "pages/hot/index",
@@ -16,7 +18,6 @@
     "pages/activities/index",
     "pages/userInfo/index",
 
-    "pages/welcome/index",
     "pages/index/index",
     "pages/userCenter/index",
     "pages/detail/index",
