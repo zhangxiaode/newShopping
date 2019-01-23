@@ -19,7 +19,10 @@ Page({
             iv: data.iv
           }
         }).then(response => {
-          console.log(222, response)
+          wx.setStorage({
+            key: 'token',
+            data: response.data.token
+          })
         })
       })
     })
@@ -29,7 +32,7 @@ Page({
       url: `/apis/login2`,
       method: "post",
       data: {
-        code: "aaaa"
+        token: wx.getStorageSync('token')
       }
     }).then(res => {
       console.log(111, res)
