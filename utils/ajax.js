@@ -6,9 +6,9 @@ export default ({url, method = 'GET', data = {}}) => {
   return new Promise((resolve, reject) => {
     wx.request({
       url: baseUrl + url,
-      header: {
-        'content-type': 'application/json'
-      },
+      // header: {
+      //   'content-type': 'application/json'
+      // },
       data: data,
       method: method,
       success: (res) => {
