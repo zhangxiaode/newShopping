@@ -1,0 +1,4 @@
+<!--index.wxml-->
+<view class="trolley">
+  trolley 购物车
+</view>

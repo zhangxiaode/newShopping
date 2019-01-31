@@ -1,4 +1,4 @@
 <!--index.wxml-->
 <view class="myCards">
-  myCards
+  myCards 我的会员卡
 </view>

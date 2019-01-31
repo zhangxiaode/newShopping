@@ -5,40 +5,13 @@ page {
 }
 
 .carte {
-  background: #e5e2ef;
+  background: #f2f2f2;
   position: relative;
   height: 100%;
 }
 
 .carteWrap {
-}
-
-.carteWrap .carteBtns {
-  border-radius: 6rpx;
-  background: #fcfcfd;
-  margin: 40rpx 20rpx;
-  height: 135rpx;
-  display: flex;
-  justify-content: space-between;
-}
-
-.carteWrap .carteBtnsItem {
-  flex: 1;
-  border-left: solid 1rpx #efeff0;
-  border-right: solid 1rpx #efeff0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.carteWrap .carteBtnsItem image {
-  width: 45rpx;
-  height: 45rpx;
-}
-
-.carteWrap .carteBtnsItem text {
-  font-size: 24rpx;
+  height:100%;overflow:auto;
 }
 
 .carteList {
@@ -77,8 +50,11 @@ page {
 }
 
 .carteList .carteBd {
+  overflow: hidden;padding:0 15rpx;
 }
-
+.carteList .carteBd .carteItem{
+  float:left;
+}
 .copyRight {
   color: #b6b3b6;
   font-size: 24rpx;
@@ -104,25 +80,39 @@ page {
 
 .carteMenus {
   position: absolute;
-  left: 0;
+  left: -200rpx;
   top: 0;
   bottom: 0;
   z-index: 10;
-}
-
-.carteMenus .menuList {
-  background: #e3e2e2;
-  width: 0;
-  height: 100%;
   transition: all 0.3s;
 }
 
-.showMenu .menuList {
-  width: 290rpx;
+.showMenu {
+  left: 0;
+}
+
+.carteMenus .menuList {
+  background: #fff;
+  width: 200rpx;
+  height: 100%;
+}
+
+.carteMenus .menuList .menuItem {
+  height: 80rpx;
+  line-height: 80rpx;
+  padding: 0 15rpx;
+  overflow: hidden;
+  font-size: 30rpx;
+  text-align: center;
+}
+
+.carteMenus .menuList .actived {
+  background: #f2f2f2;
+  color: #ee8441;
 }
 
 .carteMenus .openMenus {
-  background: #e3e2e2;
+  background: #fff;
   width: 60rpx;
   height: 100rpx;
   padding-right: 15rpx;

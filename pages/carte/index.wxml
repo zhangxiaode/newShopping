@@ -1,47 +1,31 @@
 <!--index.wxml-->
 <view class="carte">
-  <scroll-view class="carteWrap">
-    <view class="carteBtns">
-      <view class="carteBtnsItem">
-        <image src=""></image>
-        <text>随便点</text>
-      </view>
-      <view class="carteBtnsItem">
-        <image src=""></image>
-        <text>热销榜</text>
-      </view>
-      <view class="carteBtnsItem">
-        <image src=""></image>
-        <text>点过的菜</text>
-      </view>
-    </view>
-    <scroll-view class="carteList" scroll-y bindscroll="carteScroll" scroll-into-view="{{orientate}}" scroll-with-animation>
+  <scroll-view class="carteWrap" scroll-y bindscroll="carteScroll" scroll-into-view="{{orientate}}" scroll-with-animation>
+    <view class="carteList">
       <view class="carteBox" wx:for="{{carteData}}" wx:key="index" wx:for-index="index" wx:for-item="item" id="{{item.id}}">
         <view class="carteHd">
           <text>{{item.carteTitle}}</text>
         </view>
         <view class="carteBd">
-          <carteItem wx:for="{{item.carteList}}" wx:key="idx" wx:for-index="idx" wx:for-item="child" item="{{child}}" data-index="{{index}}" data-idx="{{idx}}" bind:changePrice="changePrice"></carteItem>
+          <carteItem class="carteItem" wx:for="{{item.carteList}}" wx:key="idx" wx:for-index="idx" wx:for-item="child" item="{{child}}" data-index="{{index}}" data-idx="{{idx}}" data-disheId="{{child.disheId}}" bindtap="goDetail"></carteItem>
         </view>
       </view>
-    </scroll-view>
+    </view>
     <view class="copyRight">金风凝香 提供技术支持</view>
   </scroll-view>
   <view class="carteMenusMask {{showMenu ? 'showMenuMask' : ''}}" data-close="{{true}}" bindtap='openMenus'></view>
   <view class="carteMenus {{showMenu ? 'showMenu' : ''}}">
     <scroll-view class="menuList" scroll-y scroll-with-animation>
-      <!-- <view class="scroll-view-item">
-        <view wx:for="{{menuList}}" wx:key="index" class="{{menuIndex == index ? 'menuItem actived':'menuItem'}}" data-index="{{index}}" data-id="{{item.id}}" bindtap="changeIndex">
-          {{item.value}}
-        </view>
-      </view> -->
+      <view wx:for="{{carteData}}" wx:key="index" class="{{menuIndex == index ? 'menuItem actived':'menuItem'}}" data-index="{{index}}" data-id="{{item.id}}" bindtap="changeMenu">
+        {{item.carteTitle}}
+      </view>
     </scroll-view>
     <view class="openMenus" bindtap='openMenus'>
       <image src="../../assets/openMenusIcon.svg"></image>
       <text>菜单</text>
     </view>
   </view>
-  <view class="basket">
+  <view class="basket" bindtap='goTrolley'>
     <image src="../../assets/cart.svg"></image>
     <text>购物车</text>
   </view>

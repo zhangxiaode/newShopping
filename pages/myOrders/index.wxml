@@ -1,4 +1,4 @@
 <!--index.wxml-->
 <view class="myOrders">
-  myOrders
+  myOrders 我的订单
 </view>

@@ -1,4 +1,4 @@
 <!--index.wxml-->
 <view class="myIntegral">
-  myIntegral
+  myIntegral 当前积分
 </view>

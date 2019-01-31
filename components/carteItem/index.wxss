@@ -1,40 +1,105 @@
 /**index.wxss**/
 
-.item{
-  display:flex;justify-content:space-around;align-items: center;
-  padding:20rpx;font-family: "Microsoft Yahei";
-  border-bottom:solid 2rpx #eee;
+.bigItem {
+  width: 710rpx;
+  margin: 40rpx 5rpx;
+  position: relative;
 }
-.item .itemIcon{
-  width:200rpx;height:200rpx;
+
+.bigItem .recommend {
+  position: absolute;
+  top: -20rpx;
+  left: 0;
+  height: 40rpx;
+  background: #d84445;
+  width: auto;
+  font-size: 28rpx;
+  color: #fff;
+  padding: 0 10rpx;
 }
-.item .itemTxt{
-  display:flex;flex-direction: column;justify-content:space-between;align-items: flex-start;flex:1;
-  margin-left:20rpx;height:200rpx;
+
+.bigItem .recommend .starIcon {
+  width: 24rpx;
+  height: 24rpx;
+  position: relative;
+  top: 2rpx;
 }
-.item .cookName{
-  font-size:36rpx;font-weight:bold;color:#666;
+
+.bigItem .recommend:after {
+  content: "";
+  position: absolute;
+  right: -20rpx;
+  border-top: solid 20rpx #d84445;
+  border-bottom: solid 20rpx #d84445;
+  border-right: solid 20rpx transparent;
 }
-.item .cookInfo{
-  font-size:28rpx;color:#999;
+
+.bigItem .cartePhoto {
+  width: 100%;
+  height: 360rpx;
 }
-.item .cookPrice{
-  display:flex;justify-content:space-between;align-items: center;width:100%;
-  font-size:38rpx;font-weight:bold;color:#f00;
+
+.bigItem .itemTxt {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100rpx;
+  line-height: 100rpx;
+  color: #fff;
+  padding: 0 30rpx;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-.item .cookPrice .cookPriceNum{
-  flex:1;
+
+.bigItem .itemTxt .carteName {
+  overflow: hidden;
 }
-.item .cookPrice .cookPriceNum text{
-  font-weight:normal;font-size:30rpx;color:#ccc;
+
+.bigItem .itemTxt .carteName text {
+  font-size: 36rpx;
+  font-weight: bold;
+  margin-right: 15rpx;
 }
-.item .cookPrice .changeNum{
-  display:flex;justify-content:flex-end;align-items: center;
+
+.bigItem .itemTxt .carteName .star {
+  width: 34rpx;
+  height: 34rpx;
+  position: relative;
+  top: 5rpx;
 }
-.item .cookPrice .cookIcon{
-  width:48rpx;height:48rpx;border-radius:24rpx;
+
+.bigItem .itemTxt .cartePrice {
+  font-size: 36rpx;
+  font-weight: bold;
 }
-.item .cookPrice .num{
-  color:#333;
-  flex:1;
+
+.smallItem {
+  width: 221rpx;
+  height: 290rpx;
+  border-radius: 10rpx;
+  margin: 10rpx;
+  background: #fff;
+  overflow: hidden;
+}
+
+.smallItem .cartePhoto {
+  float: left;
+  width: 100%;
+  height: 170rpx;
+}
+
+.smallItem .itemTxt {
+  float: left;
+  width: 100%;
+  height: 90rpx;
+  padding: 15rpx 0;
+}
+
+.carteName, .cartePrice {
+  line-height: 45rpx;
+  padding-left: 10rpx;
+  font-size:28rpx;font-weight:bold;
 }

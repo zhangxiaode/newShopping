@@ -1,4 +1,4 @@
 <!--index.wxml-->
 <view class="userInfo">
-  userInfo
+  userInfo 个人信息
 </view>

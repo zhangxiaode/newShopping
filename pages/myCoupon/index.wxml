@@ -1,4 +1,4 @@
 <!--index.wxml-->
 <view class="myCoupon">
-  myCoupon
+  myCoupon 我的优惠券
 </view>

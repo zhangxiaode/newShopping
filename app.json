@@ -1,8 +1,7 @@
 {
   "pages": [
-    "pages/welcome/index",
-    
     "pages/carte/index",
+    "pages/trolley/index",
     "pages/myCart/index",
     "pages/hot/index",
     "pages/dishOrders/index",
@@ -18,6 +17,7 @@
     "pages/activities/index",
     "pages/userInfo/index",
 
+    "pages/welcome/index",
     "pages/index/index",
     "pages/userCenter/index",
     "pages/detail/index",

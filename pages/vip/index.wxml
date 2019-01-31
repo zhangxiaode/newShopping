@@ -1,4 +1,4 @@
 <!--index.wxml-->
 <view class="vip">
-  vip
+  vip 当前等级
 </view>

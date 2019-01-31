@@ -1,4 +1,4 @@
 <!--index.wxml-->
 <view class="activities">
-  activities
+  activities 商家活动
 </view>

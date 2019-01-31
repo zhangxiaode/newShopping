@@ -1,4 +1,4 @@
 <!--index.wxml-->
 <view class="myPlaces">
-  myPlaces
+  myPlaces 收货地址管理
 </view>
