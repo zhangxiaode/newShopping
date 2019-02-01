@@ -116,7 +116,6 @@ Page({
       orientate: event.currentTarget.dataset.id,
       menuIndex: event.currentTarget.dataset.index
     })
-    console.log(event.currentTarget.dataset.id)
   },
   goDetail(event) {
     wx.navigateTo({

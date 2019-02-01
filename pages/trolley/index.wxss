@@ -1,7 +1,22 @@
 /**index.wxss**/
 page{
+  background: #f2f2f2;
   height:100%;
 }
-.trolley{
-  height:100%;
+.trolley .summation{
+  margin:20rpx;
+  background: #fff;
+}
+.trolley .summationHd{
+  height:80rpx;line-height:80rpx;border-bottom: solid 2rpx #e1e1e1;
+  text-align: center;font-size: 34rpx;
+}
+.trolley .summationBd{
+  display: flex;justify-content: space-between;align-items: center;
+}
+.trolley .summationBd .sumTxt{
+  flex:1;line-height:40rpx;margin:20rpx;
+}
+.trolley .summationBd image{
+  width:50rpx;height:50rpx;margin:0 20rpx 0 60rpx;
 }

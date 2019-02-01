@@ -1,4 +1,13 @@
 <!--index.wxml-->
 <view class="trolley">
-  trolley 购物车
+  <view class="summation">
+    <view class="summationHd">购物车</view>
+    <view class="summationBd">
+      <view class="sumTxt">
+        <text>购物车里有：冷菜类1个，特色菜3个</text>
+        <text>合计：￥596.00</text>
+      </view>
+      <image src="../../assets/delete.svg" class="delete"></image>
+    </view>
+  </view>
 </view>
