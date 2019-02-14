@@ -1,5 +1,5 @@
-// const baseUrl = 'https://wx.zxdkxl.com'
-const baseUrl = 'http://10.100.4.64:9090'
+const baseUrl = 'https://wx.zxdkxl.com'
+// const baseUrl = 'http://10.100.4.64:9090'
 // const baseUrl = 'http://192.168.5.102:9090'
 
 export default ({url, method = 'GET', data = {}}) => {

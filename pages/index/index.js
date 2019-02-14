@@ -27,7 +27,7 @@ Page({
     ],
     synopsis: {
       logo: "../../assets/logo.png",
-      shopName: "春暖花开",
+      shopName: "亢亢点单",
       shopDes: "51~100元 杭帮菜，粤菜",
       attention: 1
     },

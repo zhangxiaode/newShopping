@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/index/index",
     "pages/trolley/index",
     "pages/myCart/index",
     "pages/hot/index",
@@ -17,7 +18,6 @@
     "pages/userInfo/index",
 
     "pages/welcome/index",
-    "pages/index/index",
     "pages/carte/index",
     "pages/userCenter/index",
     "pages/detail/index",
@@ -52,7 +52,7 @@
   "window": {
     "backgroundTextStyle": "dark",
     "navigationBarBackgroundColor": "#202020",
-    "navigationBarTitleText": "春暖花开",
+    "navigationBarTitleText": "亢亢点单",
     "navigationBarTextStyle": "white"
   }
 }
